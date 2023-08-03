@@ -1,17 +1,11 @@
 .footer {
     width: 100%;
     grid-area: footer;
-    background-color: #ccc;
-    &__inner {
-        display: flex;
-        justify-content: space-between;
-        padding: 20px 0;
+    background-color: #6b89d9;
 
-        @media (max-width: 768px) {
-            flex-direction: column;
-            gap: 20px;
-        }
-    }
-    &__logo {
+    &__inner {
+        padding: 6px 0;
+        color: #fff;
+        text-align: center;
     }
 }

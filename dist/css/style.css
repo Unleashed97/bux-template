@@ -425,6 +425,11 @@ p {
   gap: 20px;
   padding: 20px 0;
 }
+@media (max-width: 350px) {
+  .header__inner {
+    flex-direction: column;
+  }
+}
 .header__logo {
   font-family: "Russo One", sans-serif;
   font-size: 3rem;
@@ -446,19 +451,14 @@ p {
 .footer {
   width: 100%;
   grid-area: footer;
-  background-color: #ccc;
+  background-color: #6b89d9;
 }
 .footer__inner {
-  display: flex;
-  justify-content: space-between;
-  padding: 20px 0;
+  padding: 6px 0;
+  color: #fff;
+  text-align: center;
 }
-@media (max-width: 768px) {
-  .footer__inner {
-    flex-direction: column;
-    gap: 20px;
-  }
-}
+
 .container {
   width: 100%;
   max-width: 1200px;

@@ -11,9 +11,9 @@
 
         padding: 20px 0;
 
-        // @media (max-width: $sm) {
-        //     flex-direction: column;
-        // }
+        @media (max-width: 350px) {
+            flex-direction: column;
+        }
     }
 
     &__logo {
