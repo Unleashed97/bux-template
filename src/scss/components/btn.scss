@@ -20,6 +20,14 @@
         min-width: 170px;
     }
 
+    &--lg {
+        justify-content: flex-start;
+        min-height: 60px;
+        width: 100%;
+        gap: 14px;
+        padding: 8px 15px;
+    }
+
     &--fill {
         background-color: $colors-highlight;
         color: #fff;

@@ -48,15 +48,25 @@ p {
     display: grid;
     grid-template-areas:
         'header'
-        'main'
+        'content'
         'footer';
     grid-template-rows: auto 1fr auto;
-    grid-template-columns: 100%;
+    grid-template-columns: 1fr;
+    gap: 50px 30px;
     min-height: 100vh;
 }
 
+.content {
+    grid-area: content;
+
+    &__inner {
+        display: grid;
+        grid-template-columns: 270px 1fr;
+        gap: 30px;
+    }
+}
+
 main {
-    grid-area: main;
 }
 
 // components
@@ -66,3 +76,4 @@ main {
 @import 'components/nav.scss';
 @import 'components/section.scss';
 @import 'components/btn.scss';
+@import 'components/sidebar.scss';

@@ -387,14 +387,20 @@ p {
 
 .wrapper {
   display: grid;
-  grid-template-areas: "header" "main" "footer";
+  grid-template-areas: "header" "content" "footer";
   grid-template-rows: auto 1fr auto;
-  grid-template-columns: 100%;
+  grid-template-columns: 1fr;
+  gap: 50px 30px;
   min-height: 100vh;
 }
 
-main {
-  grid-area: main;
+.content {
+  grid-area: content;
+}
+.content__inner {
+  display: grid;
+  grid-template-columns: 270px 1fr;
+  gap: 30px;
 }
 
 .header {
@@ -443,6 +449,7 @@ main {
   }
 }
 .container {
+  width: 100%;
   max-width: 1200px;
   padding: 0 15px;
   margin: 0 auto;
@@ -487,6 +494,13 @@ main {
   padding: 13px;
   min-width: 170px;
 }
+.btn--lg {
+  justify-content: flex-start;
+  min-height: 60px;
+  width: 100%;
+  gap: 14px;
+  padding: 8px 15px;
+}
 .btn--fill {
   background-color: #6b89d9;
   color: #fff;
@@ -510,4 +524,10 @@ main {
 }
 .btn--outline:hover svg path {
   fill: #fff;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
