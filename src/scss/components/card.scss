@@ -1,0 +1,28 @@
+.card {
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+
+    padding: 21px;
+
+    border-radius: 5px;
+    border: 1px solid #e4e9f2;
+    background-color: #f3f5f9;
+
+    @media (max-width: $sm) {
+        align-items: center;
+    }
+
+    &__image {
+    }
+
+    &__text {
+        flex-grow: 1;
+
+        color: #000;
+    }
+
+    .highlight {
+        font-size: 1.7rem;
+    }
+}

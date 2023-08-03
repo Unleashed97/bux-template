@@ -20,6 +20,7 @@ html {
 body {
     font-family: $family;
     font-size: 1.5rem;
+    line-height: 24px;
 }
 
 ul {
@@ -63,10 +64,16 @@ p {
         display: grid;
         grid-template-columns: 270px 1fr;
         gap: 30px;
+
+        @media (max-width: $md) {
+            grid-template-columns: 1fr;
+        }
     }
 }
 
-main {
+.highlight {
+    font-weight: 700;
+    color: $colors-highlight;
 }
 
 // components
@@ -77,3 +84,4 @@ main {
 @import 'components/section.scss';
 @import 'components/btn.scss';
 @import 'components/sidebar.scss';
+@import 'components/card.scss';

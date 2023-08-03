@@ -1,9 +1,84 @@
 .section {
-    &__inner {
-    }
-    &__title {
+    &--showcase {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        gap: 38px;
+
+        margin-bottom: 34px;
+        padding: 39px 24px 29px 36px;
+
+        border-radius: 5px;
+        background-color: rgba($color: #eef1f6, $alpha: 0.7);
+
+        @media (max-width: $lg) {
+            grid-template-columns: 1fr;
+        }
+
+        .section__text-block {
+            max-width: 401px;
+        }
+
+        .section__title {
+            margin-bottom: 15px;
+
+            font-size: 2.8rem;
+            font-weight: 700;
+            line-height: 38px;
+            text-transform: uppercase;
+            color: #222;
+
+            @media (max-width: $sm) {
+                font-size: 2.2rem;
+                line-height: 25px;
+            }
+        }
+        .section__list {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+
+            padding-left: 17px;
+        }
+
+        .section__list-item {
+            position: relative;
+
+            .hightlight {
+                text-transform: uppercase;
+            }
+        }
+
+        .section__list-item::before {
+            content: '';
+
+            position: absolute;
+            top: 7px;
+            left: -17px;
+
+            width: 7px;
+            height: 7px;
+
+            background-color: $colors-highlight;
+            border-radius: 50%;
+        }
+
+        .section__image {
+            display: block;
+            max-width: 100%;
+            height: auto;
+        }
     }
 
-    &__content {
+    &--advantages {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+
+        @media (max-width: $lg) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+        @media (max-width: $sm) {
+            grid-template-columns: 1fr;
+        }
     }
 }
